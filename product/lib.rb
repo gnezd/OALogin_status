@@ -146,3 +146,17 @@ def parse_ols(path)
 	end #begin
 end #func parse_ols
 
+class Machine
+	def initialize(name, path)
+		@ols_path = path
+		@name = name
+	end
+	
+	def path
+		return @ols_path
+	end
+
+	def name
+		return @name
+	end
+end

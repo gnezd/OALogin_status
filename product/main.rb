@@ -131,24 +131,16 @@ output = <<-EOHeader
 EOHeader
 
 
-sqnum = 1
-path = "/home/pi/Desktop/mount_points/sq#{sqnum}_c/MassLynx/OALogin/Batchdb/Status.ols"
+$machines.each do |machine|
 
 begin
-	output += get_machine(path)
+	puts "acquiring machine named #{machine.name} at ols path of #{machine.path}"
+	output += get_machine(machine.path)
 rescue
-	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"sq1\">\n<p class=\"m_table_title\">SQD1 Canot be reached</p></div>\n"
+	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"#{machine.name}\">\n<p class=\"m_table_title\">#{machine.name} Canot be reached</p></div>\n"
 		
 end
-
-sqnum = 3
-path = "/home/pi/Desktop/mount_points/sq#{sqnum}_c/MassLynx/OALogin/Batchdb/Status.ols"
-
-begin
-output += get_machine(path)
-rescue
-	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"sq3\">\n<p class=\"m_table_title\">SQD3 Canot be reached</p></div>\n"
-end
+end #end machine
 
 
 output += "<p>Page updated at #{Time.now}</p></div>"
