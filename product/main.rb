@@ -1,22 +1,27 @@
 require './lib.rb'
+require './settings.rb'
 
-def get_machine(sqnum)
-
+def get_machine(ols_path)
 	output = String.new
-	if sqnum.class == Fixnum
-		path = "/home/pi/Desktop/mount_points/sq#{sqnum}_c/MassLynx/OALogin/Batchdb/"
-		ols_path = "#{path}Status.ols"
-	else
-		ols_path = sqnum
+	
+	#check ols_path
+	if ols_path =~/\/sq\d_c\/[\s\S]*\/Status.ols$/
+		sqnum = ols_path.split('/sq')[1].split('_c/')[0].to_i #MoBiAS name setup
+		path = ols_path.split('Status.ols')[0]
+	else #not standard MoBiAS environment, probably testing
+		sqnum = "UNDEF"
+		path = ols_path[0..(ols_path =~/\/[^\/]*$/)] # find the directory ... is this somewhat wheel inventing? whatever.
 	end
+
 	begin
 	ols_updtime = File.mtime(ols_path)
-	plate_1, plate_2, current, batch_ext, inj_state, server_status_cycle, oastat, last_err, auto_smplr, analysis_time, invalid_plates, health = parse_ols(ols_path)
-	(0..plate_2[0].length-1).each do |i| #add spice to position
+	response = `cp "#{ols_path}" ./ols` #make a copy of the ols to avoid possible locking of the file
+	plate_1, plate_2, current, batch_ext, inj_state, server_status_cycle, oastat, last_err, auto_smplr, analysis_time, invalid_plates, health = parse_ols("./ols")
+	(0..plate_2[0].length-1).each do |i| #Set vial position - plate # to 2 if it's from plate 2
 		plate_2[0][i][3][0..3] = "\x02\0\0\0"
 	end
 	batchlist = plate_1[0] + plate_2[0]
-	batchlist.sort! {|a, b| a[2] <=> b[2]}
+	batchlist.sort! {|a, b| a[2] <=> b[2]} #sort with submission time
 
 	deg=0
 	(0..batchlist.length-1).each do |i| #catch degeneracy when cross plate
@@ -24,27 +29,34 @@ def get_machine(sqnum)
 			deg += 1
 		end
 	end
+
 	rescue
+		puts "Sth went wrong during ols file reading"
 		health = "FALSE"
 	end
 
 
 	if health == "FALSE"
-	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"sq#{sqnum}\">\n<p class=\"m_table_title\">SQD#{sqnum} Queue:</p>\n"
+	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"sq#{sqnum}\">\n<p class=\"m_table_title\">SQD#{sqnum}</p>\n"
 		output += "<p style=\"color: red;\">Not running properly.</p>\n"
 	else 
-		output += "<div class=\"machinebox\"><table class=\"machinetable\" id =\"sq#{sqnum}\">\n<p class=\"m_table_title\">SQD#{sqnum} Queue:</p>\n"
+		output += "<div class=\"machinebox\"><table class=\"machinetable\" id =\"sq#{sqnum}\">\n<p class=\"m_table_title\">SQD#{sqnum}</p>\n"
 	if batchlist.length == 0
-		output += "<p>Machine has an empty Queue.</p>\n"
+		output += "<p>Machine has an empty queue.</p>\n"
 	end
-	end
+	end # if healthy
+
 		#report the queue
-		output += "<p> #{batchlist.length-deg} job"
-		output += "s" if batchlist.length-deg > 1
+		if batchlist.length-deg == 1
+			output += "<p> Has one job"
+		else
+			output += "<p> Has #{batchlist.length-deg} jobs"
+		end #Job number cases
 		mins = (analysis_time/60).to_int 
 		output += " in the queue, time needed: "
 		output += "#{mins} mins and " if mins > 0
-		output += "#{(analysis_time.to_int%60)} seconds.</p>
+		output += "#{(analysis_time.to_int%60)} seconds.</p>"
+		output +="
 		<tr class=\"first_row\">
 		<td nowrap class =\"first_row\">Job name</td>
 		<td nowrap class =\"first_row\">Time submitted</td>
@@ -52,23 +64,24 @@ def get_machine(sqnum)
 		<td nowrap class =\"first_row\">Method</td>
 		<td nowrap class =\"first_row\">Time(min)</td>
 		<td nowrap class =\"first_row\">Priority / Night queue</td></tr>"
-#batchlist loop
-		batchlist.each do |batch|
+
+		batchlist.each do |batch| #batchlist loop
 			output += "<tr #{'id ="current"' if batch[1] == current}><td nowrap>#{batch[1]}</td>
 			<td nowrap class=\"internal\">#{batch[2]}</td>"
-			if batch[3].length == 12 #if in the plate
+			if batch[3].length == 12 #if in the plate and not bigger vial slots
 			positions = "Plate #{batch[3][0..3].unpack('l')[0].to_s} ##{batch[3][4..7].unpack('l')[0].to_s}"
-			if batch[3][4..7] != batch[3][8..11] #more than one?
+			if batch[3][4..7] != batch[3][8..11] #more than one? number_of_vials calc
 				begin
-					n_o_w = batch[3][8..11].unpack('l')[0] - batch[3][4..7].unpack('l')[0]+1 
+					n_o_v = batch[3][8..11].unpack('l')[0] - batch[3][4..7].unpack('l')[0]+1 
 				rescue
-					n_o_w = nil
+					n_o_v = nil
 				end
 					positions += "~#{batch[3][8..11].unpack('l')[0].to_s}"
 			else
-				n_o_w = 1
-			end
-			end
+				n_o_v = 1
+			end #more than one
+			end #In 48 well plate
+
 			output += "<td nowrap class=\"internal\">#{positions}</td>"
 			lcmethod = `grep 'LCMethod=' "#{path}/#{batch[1]}.OLB"`
 			lcmethod = lcmethod.split('=')[1].chomp
@@ -78,7 +91,7 @@ def get_machine(sqnum)
 			if time_min == nil
 				time_min = 0
 			end
-			output += "<td nowrap class=\"internal\">#{time_min * n_o_w if n_o_w.class != NilClass}</td>"
+			output += "<td nowrap class=\"internal\">#{time_min * n_o_v if n_o_v.class != NilClass}</td>"
 			
 			output += "<td nowrap class=\"internal\">" #priority / night queue
 			if batch[4].unpack('l')[0] != 0
@@ -92,12 +105,8 @@ def get_machine(sqnum)
 			else
 				output += "-"
 			end
- 
-				
 			output +=  "</td></tr>"
-		end
-
-#end batchlist loop
+		end #end batchlist loop
 
 
 
@@ -107,12 +116,10 @@ def get_machine(sqnum)
 
 end
 
-
 #---main
-html_path = "/var/www/html/stat.html"
 output = <<-EOHeader
 <head>
-<title>MoBiAS Open Access LCMS Queue monitor</title>
+<title>#{$html_title}</title>
 <link rel="stylesheet" type="text/css" href="ui.css">
 <meta http-equiv="refresh" content="30">
 </head>
@@ -123,15 +130,20 @@ output = <<-EOHeader
 <div id="pagebox">
 EOHeader
 
+
+$machines.each do |machine|
+
 begin
-output += get_machine(1)
+	puts "acquiring machine named #{machine.name} at ols path of #{machine.path}"
+	output += get_machine(machine.path)
 rescue
-	output += "<p>Cannot reach SQ1</p>"
+	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"#{machine.name}\">\n<p class=\"m_table_title\">#{machine.name} Canot be reached</p></div>\n"
+		
 end
-output += get_machine(3)
+end #end machine
+
 
 output += "<p>Page updated at #{Time.now}</p></div>"
-fo = File.open(html_path, "w")
+fo = File.open($html_path, "w")
 fo.puts output
 fo.close
-#puts output
