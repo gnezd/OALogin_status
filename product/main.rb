@@ -9,7 +9,6 @@ def get_machine(sqnum)
 	else
 		ols_path = sqnum
 	end
-#	if sqnum == 3; ols_path = "./1847.ols" end
 	begin
 	ols_updtime = File.mtime(ols_path)
 	plate_1, plate_2, current, batch_ext, inj_state, server_status_cycle, oastat, last_err, auto_smplr, analysis_time, invalid_plates, health = parse_ols(ols_path)

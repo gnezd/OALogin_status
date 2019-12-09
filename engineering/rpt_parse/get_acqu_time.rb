@@ -4,7 +4,7 @@ require './rpt_parse_lib.rb'
 
 #pressure, curve = parse_rpt(ARGV[0])
 #puts pressure
-#puts curve[0]
+	#puts curve[0]
 
 path = "/home/pi/Desktop/mount_points/sq1_e/Masslynx Projects/OALogin_rpt"
 
