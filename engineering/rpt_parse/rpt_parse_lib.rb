@@ -8,24 +8,27 @@ def initialize(fname)
 	@max_pressure = 0
 	@curve = Array.new
 	ptr = 0
-	(0..raw.size-1).each do |ln|
-	if raw[ln] == "Description\tSystem Pressure\r\n"
+	
+	while raw[ptr] != "Description\tSystem Pressure\r\n"
+		ptr += 1
+		raise "Cannot find pressure trace!" if ptr > raw.size
+	end
+	
+	if raw[ptr] == "Description\tSystem Pressure\r\n"
 		puts "found Pressure start!"
-		ptr = ln+3
+		ptr +=3
 		@max_pressure = raw[ptr].split("MaxIntensity\t")[1].to_f
-		break
 	end
-
-	ptr += 3 #points to pressure trace line 1
-	#puts raw[ptr]	
+	ptr +=3
+	#debug_counter = 0
 	while raw[ptr] =~ /^\d\./
-		
+		#break if debug_counter > 10
 		(t, p_norm) = raw[ptr].split(' ')
-		@curve.push([t, p_norm*@max_pressure])
+		@curve.push([t, p_norm.to_f*@max_pressure/100])
 		ptr +=1
+		#debug_counter+=1
 	end
 
-	end
 	return self
 end
 	def max_pressure 
