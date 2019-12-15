@@ -5,13 +5,15 @@ require './rpt_parse_lib.rb'
 #pressure, curve = parse_rpt(ARGV[0])
 #puts pressure
 	#puts curve[0]
-path = "../../testdata/rpts/Bode - AlKa - 23 - on.rpt"
-rpt = OALogin_Report.new(path)
+path1 = "../../testdata/rpts/Bode - AlKa - 23 - on.rpt"
+path2 = "../../testdata/rpts/Bode - JF-9-184-10min.rpt"
+rpt1 = OALogin_Report.new(path1)
+rpt2 = OALogin_Report.new(path2)
 
-puts "max pessure: #{rpt.max_pressure}"
-puts rpt.curve.size
+
+#puts "max pessure: #{rpt.max_pressure}"
+#puts rpt.curve.size
 output = String.new
-sample_name=path
 output += <<-END_HTML_HEAD
   <html>
   <head>
@@ -23,17 +25,22 @@ output += <<-END_HTML_HEAD
       function drawChart() {
         var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
-	data.addColumn('number', '#{sample_name}');
-	data.addRows([
 END_HTML_HEAD
 
-rpt.curve.each do |pt|
-	output += "[#{pt[0]},#{pt[1]}], "
+	output+="data.addColumn('number', '#{path1}');
+	data.addRows(["
+
+rpt1.curve.each do |pt|
+	output += "[#{pt[0]},#{pt[1]}], \n"
 end
+	output+="]);"
+	output+="data.addColumn('number', '#{path2}');
+	data.addRows(["
 
 
+
+	output+="]);"
 output += <<END_HTML_TAIL
-	]);
 	var options = {
         hAxis: {
           title: 'RetentionTime'
