@@ -6,8 +6,12 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
+//	alert("In drawChart()!");
         var data = new google.visualization.DataTable();
+      	var checkedline1 = document.getElementById('line1').checked;
 	data.addColumn('number', 'X');
+	if (checkedline1 == true){
+	alert("Check is true!");	
 	data.addColumn('number', '../../testdata/rpts/Bode - AlKa - 23 - on.rpt');
 	data.addRows([
 [0.00167,361.6113132], 
@@ -1812,6 +1816,7 @@
 [3.00007,401.03036010000005], 
 [3.00174,401.14167840000005], 
 	]);
+}
 	var options = {
         hAxis: {
           title: 'RetentionTime'
@@ -1822,14 +1827,14 @@
         backgroundColor: '#f1f8e9'
       	}
 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-	chart.draw(data, options);	
+	chart.draw(data,options);	
         }
     </script>
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px"></div>
     <form>
-	<input type="checkbox" name="line1" id="line1" checked>
+	<input type="checkbox" name="line1" id="line1" onchange='drawChart();' checked>
     </form>
   </body>
 </html>

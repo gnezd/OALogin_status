@@ -1,10 +1,11 @@
 class OALogin_Report
+	attr_reader :name	
 def initialize(fname)
-	
 	puts "opening file #{fname}" #debug
 	fin = File.open(fname, mode: 'r:ISO-8859-1')
 	raw = fin.readlines
 	fin.close
+	@name = fname
 	@max_pressure = 0
 	@curve = Array.new
 	ptr = 0
@@ -37,6 +38,7 @@ end
 	def curve 
 		return @curve
 	end
+
 
 end
 

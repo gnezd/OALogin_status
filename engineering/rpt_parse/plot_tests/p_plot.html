@@ -6,7 +6,6 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-	alert("In drawChart()!");
         var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
 	data.addColumn('number', '../../testdata/rpts/Bode - AlKa - 23 - on.rpt');
@@ -1823,18 +1822,11 @@
         backgroundColor: '#f1f8e9'
       	}
 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-      	var checkedline1 = document.getElementById('line1').checked;
-	if (checkedline1 == true){
-	alert("Check is true!");
-	chart.draw(data, options);
-	}	
+      	chart.draw(data, options);	
         }
     </script>
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px"></div>
-    <form>
-	<input type="checkbox" name="line1" id="line1" onchange='drawChart();'>
-    </form>
   </body>
 </html>
