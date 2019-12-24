@@ -104,8 +104,7 @@ sample.children.each do |child| #children of 1st sample
 		end#end iteration spcr
 	end
 
-end # end children of 1st sample
-end #end sample
+end # end children :
 
 end #end report iter
 
