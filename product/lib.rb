@@ -147,16 +147,9 @@ def parse_ols(path)
 end #func parse_ols
 
 class Machine
-	def initialize(name, path)
-		@ols_path = path
+	attr_reader :path, :name
+	def initialize(name, ols_path)
+		@path = ols_path
 		@name = name
-	end
-	
-	def path
-		return @ols_path
-	end
-
-	def name
-		return @name
 	end
 end

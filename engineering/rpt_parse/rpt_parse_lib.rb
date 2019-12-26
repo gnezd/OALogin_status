@@ -1,3 +1,5 @@
+require 'time'
+
 $debug = 0
 class Tag
 	attr_accessor :content, :children
@@ -24,18 +26,35 @@ end #end class Tag
 
 class Sample
 
-	attr_reader :max_pressure, :pressure_curve, :acqu_time
+	attr_reader :max_pressure, :pressure_curve, :acqu_time, :name, :description, :lc_method, :ms_method, :position, :analysis_time, :inject_volume, :mslist
 	def initialize(sample_tag)
-		sample.children.each do |child| #sample's childre, seeking [FUNCTION]
-			if child.name == "FUNCTION"
-				child.children.each do |spcr| #spectrum or chromatogram?
-				if spcr.content["Description"] == "System Pressure"
-					@max_pressure = spcr.content["MaxIntensity"]
-				end
+		@pressure_curve = Array.new
+		sample_tag.children.each do |depth1| #sample's children depth1, seeking [FUNCTION]
+			if depth1.name == "FUNCTION"
+				depth1.children.each do |depth2| #spectrum or chromatogram?
+				if depth2.content["Description"] == "System Pressure"
+					@max_pressure = depth1.content["MaxIntensity"]
+					@pressure_curve = depth1.children[0].content.to_a
+				end #end FUNCTION chromatogram
+				end #end each depth2
+			elsif depth1.name == "COMPOUND"#other chrom
+				#Masslist
+				@mslist = depth1.content.keys[1..]
+			elsif depth1.name == "INLET PARAMETERS"#other chrom
+				puts "In here" 
+					
 			end #if FUNCTION
-		end #end sample's children
-	end #nd init
-end #nd class
+		end #end sample's children depth1
+		@acqu_time = Time.parse(sample_tag.content["Date"]+" "+sample_tag.content["Time"])
+		@name = sample_tag.content["SampleID"].to_s
+		@description = sample_tag.content["SampleDescription"].to_s
+		@lc_method = sample_tag.content["InletMethod"].to_s
+		@ms_method = sample_tag.content["MSMethod"].to_s
+		@position = sample_tag.content["Well"].to_s
+		@analysis_time = sample_tag.content["AnalysisTime"].to_f
+		@inject_volume = sample_tag.content["InjectionVolume"].to_f
+	end #end init
+end #end class
 
 
 class OALogin_Report
@@ -121,6 +140,16 @@ def get_acqtime (fname)
 	return date, time
 	
 end
-$debug = 1
+$debug = 0
 rpt = OALogin_Report.new(ARGV[0])
-puts rpt.root.children[0].object_id 
+puts rpt.samples[0].acqu_time
+puts rpt.samples[0].name
+puts rpt.samples[0].description
+puts rpt.samples[0].lc_method
+puts rpt.samples[0].ms_method
+puts rpt.samples[0].position
+puts rpt.samples[0].analysis_time
+puts rpt.samples[0].inject_volume
+puts rpt.samples[0].mslist.size
+
+
