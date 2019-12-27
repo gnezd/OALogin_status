@@ -140,16 +140,4 @@ def get_acqtime (fname)
 	return date, time
 	
 end
-$debug = 0
-rpt = OALogin_Report.new(ARGV[0])
-puts rpt.samples[0].acqu_time
-puts rpt.samples[0].name
-puts rpt.samples[0].description
-puts rpt.samples[0].lc_method
-puts rpt.samples[0].ms_method
-puts rpt.samples[0].position
-puts rpt.samples[0].analysis_time
-puts rpt.samples[0].inject_volume
-puts rpt.samples[0].mslist.size
-
 
