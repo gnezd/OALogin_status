@@ -1,5 +1,7 @@
 require './lib.rb'
+require '../engineering/rpt_parse/rpt_parse_lib.rb'
 require './settings.rb'
+require 'open3'
 
 def get_machine(ols_path)
 	output = String.new
@@ -114,6 +116,49 @@ def get_machine(ols_path)
 	
 	return output
 
+end #def get_machine
+
+def last_5_p_curve_plot(path, svg_out)
+	rpt_list = `find \"#{path}\" -maxdepth 1 -name \"*.rpt\" -mtime -6 -type f -printf '%Ts %f\n'| sort -nr|head -5|cut -d ' ' -f2-`.split("\n")
+	fname_list = []
+	plot_data = File.new("data", "w")
+	rpt_list.each do |fname|
+		rpt = OALogin_Report.new(path+fname)
+		puts rpt.root.children[0].content["FileName"]
+		rpt.root.children.each do |sample|
+			fname_list.push(sample.content["FileName"])
+			sample.children.each do |child| #children of 1st sample
+			        if child.name == "FUNCTION"
+					child.children.each do |spcr| #spectrum or chromatogram?
+			                        if spcr.content["Description"] == "System Pressure"
+							spcr.children[0].content.each_key do |key|
+								plot_data.puts "#{key}\t#{spcr.children[0].content[key].to_f*spcr.content["MaxIntensity"].to_f/100}"
+							end
+						plot_data.write("\n\n")
+						end
+					end#end iteration spcr
+				end
+			end # end children :
+		end #end sample
+	end #end report iter
+		plot_data.close
+
+	gnuplot_command =<<"END"
+set terminal svg size 1000 600
+set output "#{svg_out}"
+set xrange [0:7]
+set yrange[0:*]
+set key outside
+END
+	gnuplot_command  << "plot 'data' index 0 with lines t '#{fname_list[0].gsub('_','\_')}'"
+	(1..fname_list.size-1).each do |fname_index|
+		gnuplot_command << ", '' index #{fname_index} with lines t '#{fname_list[fname_index].gsub('_','\_')}'"
+	end
+	
+	image, s = Open3.capture2(
+		"gnuplot",
+		:stdin_data=> gnuplot_command, :binmode=>true)
+	
 end
 
 #---main
@@ -147,3 +192,6 @@ output += "<p>Page updated at #{Time.now}</p></div>"
 fo = File.open($html_path, "w")
 fo.puts output
 fo.close
+
+last_5_p_curve_plot("/home/pi/Desktop/mount_points/sq1_e/Masslynx Projects/OALogin_rpt/","/var/www/html/sq1.svg")
+last_5_p_curve_plot("/home/pi/Desktop/mount_points/sq3_e/Masslynx Projects/OALogin_reportdb/","/var/www/html/sq3.svg")

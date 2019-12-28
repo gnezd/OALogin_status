@@ -39,7 +39,9 @@ class Sample
 				end #end each depth2
 			elsif depth1.name == "COMPOUND"#other chrom
 				#Masslist
-				@mslist = depth1.content.keys[1..]
+
+				@mslist = depth1.content.keys
+				@mslist.shift
 			elsif depth1.name == "INLET PARAMETERS"#other chrom
 				puts "In here" 
 					
