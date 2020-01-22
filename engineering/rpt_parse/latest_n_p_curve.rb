@@ -26,7 +26,7 @@ end #end class Tag
 class OALogin_Report
 	attr_reader	:root
 def initialize(fname)
-path = fname
+path = ARGV[0]+fname
 rpt = File.open(path, mode: 'r:ISO-8859-1')
 raw = rpt.readlines
 rpt.close
@@ -79,7 +79,10 @@ end
 
 #main: test to output the five last submission pressure curves
 path = ARGV[0]
-rpt_list = `ls -1ct \"#{path}\"/*.rpt|head -5`.split("\n")
+numb = ARGV[1]
+#rpt_list = `ls -1ct \"#{path}\"/*.rpt|head -5`.split("\n")
+rpt_list = `find \"#{path}\" -maxdepth 1 -name \"*.rpt\" -mtime -6 -type f -printf '%Ts %f\n'| sort -nr|head -#{numb}|cut -d ' ' -f2-`.split("\n")
+
 fname_list = []
 plot_data = File.new("data", "w")
 
@@ -107,6 +110,7 @@ sample.children.each do |child| #children of 1st sample
 end # end children :
 
 end #end report iter
+end #end fname
 
 plot_data.close
 
