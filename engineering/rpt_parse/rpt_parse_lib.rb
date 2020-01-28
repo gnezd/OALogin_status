@@ -33,8 +33,12 @@ class Sample
 			if depth1.name == "FUNCTION"
 				depth1.children.each do |depth2| #spectrum or chromatogram?
 				if depth2.content["Description"] == "System Pressure"
-					@max_pressure = depth1.content["MaxIntensity"]
-					@pressure_curve = depth1.children[0].content.to_a
+					@max_pressure = depth2.content["MaxIntensity"].to_f
+					if depth2.children[0].name == "TRACE"
+						@pressure_curve = depth2.children[0].content.to_a
+					else
+						raise "Didn't find pressure trace! Tag named #{depth2.children[0].name} instead}"
+					end
 				end #end FUNCTION chromatogram
 				end #end each depth2
 			elsif depth1.name == "COMPOUND"#other chrom
@@ -43,7 +47,7 @@ class Sample
 				@mslist = depth1.content.keys
 				@mslist.shift
 			elsif depth1.name == "INLET PARAMETERS"#other chrom
-				puts "In here" 
+				#puts "In here" 
 					
 			end #if FUNCTION
 		end #end sample's children depth1

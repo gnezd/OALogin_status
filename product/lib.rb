@@ -147,9 +147,50 @@ def parse_ols(path)
 end #func parse_ols
 
 class Machine
-	attr_reader :path, :name
-	def initialize(name, ols_path)
+	attr_reader :path, :name, :rpt_path
+	def initialize(name, ols_path, rpt_path)
 		@path = ols_path
 		@name = name
+		@rpt_path = rpt_path
 	end
 end
+
+#for visualization
+#
+def p_curve_plot(path, svg_out, n)
+	rpt_list = `find \"#{path}\" -maxdepth 1 -name \"*.rpt\" -mtime -6 -type f -printf '%Ts %f\n'| sort -nr|head -#{n}|cut -d ' ' -f2-`.split("\n")
+	fname_list = []
+	time_list = []
+	plot_data = File.new("data", "w")
+	rpt_list.each do |fname|
+		rpt = OALogin_Report.new(path+fname)
+		rpt.samples.reverse.each do |sample|
+			fname_list.push(sample.name)
+			time_list.push(sample.acqu_time)
+			sample.pressure_curve.each do |pressure_pt|
+				plot_data.puts "#{pressure_pt[0]}\t#{(pressure_pt[1].to_f)*sample.max_pressure/100}"
+			end
+			plot_data.write("\n\n")
+		end #end sample
+	end #end report iter
+		plot_data.close
+
+	gnuplot_command =<<"END"
+set terminal svg size 1000 600
+set output "#{svg_out}"
+set xrange [0:7]
+set yrange[0:*]
+set key outside
+END
+	gnuplot_command  << "plot 'data' " 	
+	(0..fname_list.size-1).each do |fname_index|
+		gnuplot_command << ", '' " if fname_index > 0
+		gnuplot_command << "index #{fname_index} with lines t '#{fname_list[fname_index].split(/_(#{Time.now.strftime("%Y%m%d")}|#{(Time.now-86400).strftime("%Y%m%d")})/)[0].gsub('_','\_')} | #{time_list[fname_index].strftime("%R")}'"
+	end
+	
+	image, s = Open3.capture2(
+		"gnuplot",
+		:stdin_data=> gnuplot_command, :binmode=>true)
+	
+end
+
