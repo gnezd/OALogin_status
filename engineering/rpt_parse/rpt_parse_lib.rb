@@ -2,7 +2,7 @@ require 'time'
 
 $debug = 0
 class Tag
-	attr_accessor :content, :children
+	attr_accessor :content, :children, :text
 	attr_reader :name, :depth, :parent
 def adopt(orphan)
 	#print "Adopting. Children num from #{@children.size}"
@@ -14,6 +14,7 @@ def initialize(tag_name, depth, parent)
 	
 	@content = Hash.new
 	@children = Array.new
+	@text = Array.new
 	@name = tag_name
 	@depth = depth
 	@parent = parent	
@@ -26,31 +27,66 @@ end #end class Tag
 
 class Sample
 
-	attr_reader :max_pressure, :pressure_curve, :acqu_time, :name, :description, :lc_method, :ms_method, :position, :analysis_time, :inject_volume, :mslist
+	attr_reader :max_pressure, :pressure_curve, :acqu_time, :name, :description, :lc_method, :ms_method, :position, :analysis_time, :inject_volume, :mslist, :tic_p, :tic_p_max, :tic_m, :tic_m_max, :dads_curve, :dads_max, :dads_wv
 	def initialize(sample_tag)
 		@pressure_curve = Array.new
+		@tic_p = Array.new
+		@tic_m = Array.new
+		@dads_curve = Array.new
+		@dads_max = Array.new
+		@dads_wv = Array.new
 		sample_tag.children.each do |depth1| #sample's children depth1, seeking [FUNCTION]
 			if depth1.name == "FUNCTION"
-				depth1.children.each do |depth2| #spectrum or chromatogram?
-				if depth2.content["Description"] == "System Pressure"
+				depth1.children.each do |depth2| 
+					if depth2.name == "CHROMATOGRAM"	#spectrum or chromatogram?
+				case depth2.content["Description"]
+				when "System Pressure"
 					@max_pressure = depth2.content["MaxIntensity"].to_f
 					if depth2.children[0].name == "TRACE"
 						@pressure_curve = depth2.children[0].content.to_a
 					else
 						raise "Didn't find pressure trace! Tag named #{depth2.children[0].name} instead}"
 					end
-				end #end FUNCTION chromatogram
+				when "MS ES+ :TIC"
+					@tic_p_max = depth2.content["MaxIntensity"].to_f
+					if depth2.children[0].name == "TRACE"
+						@tic_p = depth2.children[0].content.to_a
+					else
+						raise "Didn't find TIC+ trace! Tag named #{depth2.children[0].name} instead}"
+					end
+				when "MS ES- :TIC"
+					@tic_m_max = depth2.content["MaxIntensity"].to_f
+					if depth2.children[0].name == "TRACE"
+						@tic_m = depth2.children[0].content.to_a
+					else
+						raise "Didn't find TIC- trace! Tag named #{depth2.children[0].name} instead}"
+					end
+				when /^DAD:\s\d\d\d/
+					@dads_wv.push(depth2.content["Description"].split("DAD: ")[0].to_f)
+					@dads_max.push(depth2.content["MaxIntensity"].to_f)
+					if depth2.children[0].name == "TRACE"
+						@dads_curve.push(depth2.children[0].content.to_a)
+					else
+						raise "Didn't find DAD trace! Tag named #{depth2.children[0].name} instead}"
+					end
+
+				end #end depth2 case
+					end #depth2 == CHROMATOGRAM
 				end #end each depth2
-			elsif depth1.name == "COMPOUND"#other chrom
+			elsif depth1.name == "COMPOUND"
 				#Masslist
 
 				@mslist = depth1.content.keys
 				@mslist.shift
-			elsif depth1.name == "INLET PARAMETERS"#other chrom
-				#puts "In here" 
+			elsif depth1.name == "INLET PARAMETERS"
+				depth1.text.each do |ln| #ad hoc extraction of injection volume
+					if ln =~ /^Injection\sVolume/
+						@inject_volume = ln.split("  -  ")[1].to_f
+					end
+				end
 					
 			end #if FUNCTION
-		end #end sample's children depth1
+		end #end iteration sample's children depth1
 		@acqu_time = Time.parse(sample_tag.content["Date"]+" "+sample_tag.content["Time"])
 		@name = sample_tag.content["SampleID"].to_s
 		@description = sample_tag.content["SampleDescription"].to_s
@@ -58,7 +94,7 @@ class Sample
 		@ms_method = sample_tag.content["MSMethod"].to_s
 		@position = sample_tag.content["Well"].to_s
 		@analysis_time = sample_tag.content["AnalysisTime"].to_f
-		@inject_volume = sample_tag.content["InjectionVolume"].to_f
+		puts @inject_volume
 	end #end init
 end #end class
 
@@ -102,10 +138,12 @@ if raw[ln] =~ /^}/
 	puts "#{" "*depth}now back at level of [#{current_head.name}], depth #{depth}" if $debug == 1
 end
 
-	if match=raw[ln].match(/([^\t]*)\t([^\t\r\n]*)(\r)?(\n)/)
+	if current_head.name == "INLET PARAMETERS"
+		current_head.text.push(raw[ln])
+	elsif match=raw[ln].match(/([^\t]*)\t([^\t\r\n]*)(\r)?(\n)/)
 		#puts "#{ln}:#{raw[ln]}"
 		current_head.content[match[1]]=match[2]
-	end
+	end #tag content pushing on tag type
 
 end #end line iteration
 

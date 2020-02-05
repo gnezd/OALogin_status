@@ -161,12 +161,16 @@ def p_curve_plot(path, svg_out, n)
 	rpt_list = `find \"#{path}\" -maxdepth 1 -name \"*.rpt\" -mtime -6 -type f -printf '%Ts %f\n'| sort -nr|head -#{n}|cut -d ' ' -f2-`.split("\n")
 	fname_list = []
 	time_list = []
+	injection_volume_list = []
+	lcmethod_list = []
 	plot_data = File.new("data", "w")
 	rpt_list.each do |fname|
 		rpt = OALogin_Report.new(path+fname)
 		rpt.samples.reverse.each do |sample|
 			fname_list.push(sample.name)
 			time_list.push(sample.acqu_time)
+			injection_volume_list.push(sample.inject_volume)
+			lcmethod_list.push(sample.lc_method)	
 			sample.pressure_curve.each do |pressure_pt|
 				plot_data.puts "#{pressure_pt[0]}\t#{(pressure_pt[1].to_f)*sample.max_pressure/100}"
 			end
@@ -180,12 +184,12 @@ set terminal svg size 1000 600
 set output "#{svg_out}"
 set xrange [0:7]
 set yrange[0:*]
-set key outside
+set key outside center bottom
 END
 	gnuplot_command  << "plot 'data' " 	
 	(0..fname_list.size-1).each do |fname_index|
 		gnuplot_command << ", '' " if fname_index > 0
-		gnuplot_command << "index #{fname_index} with lines t '#{fname_list[fname_index].split(/_(#{Time.now.strftime("%Y%m%d")}|#{(Time.now-86400).strftime("%Y%m%d")})/)[0].gsub('_','\_')} | #{time_list[fname_index].strftime("%R")}'"
+		gnuplot_command << "index #{fname_index} with lines t '#{fname_list[fname_index].split(/_(#{Time.now.strftime("%Y%m%d")}|#{(Time.now-86400).strftime("%Y%m%d")})/)[0].gsub('_','\_')} | #{time_list[fname_index].strftime("%R")} | #{lcmethod_list[fname_index].gsub('_','\_')} | #{injection_volume_list[fname_index]} uL'"
 	end
 	
 	image, s = Open3.capture2(
