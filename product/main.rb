@@ -147,13 +147,13 @@ end #end machine
 
 
 output += "<p>Page updated at #{Time.now}</p></div>"
-fo = File.open($html_path, "w")
+fo = File.open("#{$html_path}stat.html", "w")
 fo.puts output
 fo.close
 
 $machines.each do |machine| #plot p curves
 
-	p_curve_plot(machine.rpt_path, "/var/www/html/#{machine.name}.svg", 5)
+	p_curve_plot(machine.rpt_path, "#{$html_path+machine.name}.svg", 5)
 
 end
 

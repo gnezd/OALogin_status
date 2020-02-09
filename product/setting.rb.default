@@ -1,7 +1,0 @@
-require './lib.rb'
-#The path of generated html
-$html_path = "/var/www/html/stat.html"
-$tml_title = "MoBiAS Open Access LCMS Queue monitor"
-$machines = Array.new
-$machines.push(Machine.new("SQD1", "/home/pi/Desktop/mount_points/sq1_c/MassLynx/OALogin/Batchdb/Status.ols"))
-$machines.push(Machine.new("SQD3", "/home/pi/Desktop/mount_points/sq3_c/MassLynx/OALogin/Batchdb/Status.ols"))
