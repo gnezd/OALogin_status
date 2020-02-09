@@ -1,0 +1,1374 @@
+New tag id = 43859140
+[SAMPLE] depth: 0, child of root
+New tag id = 43855500
+ [COMPOUND] depth: 1, child of SAMPLE
+end tag, object id = 43855500
+ now back at level of [SAMPLE], depth 1
+New tag id = 43854600
+ [FRACTIONRESULTS] depth: 1, child of SAMPLE
+end tag, object id = 43854600
+ now back at level of [SAMPLE], depth 1
+New tag id = 43854000
+ [FRACTION] depth: 1, child of SAMPLE
+end tag, object id = 43854000
+ now back at level of [SAMPLE], depth 1
+New tag id = 43853400
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 43852600
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43875720
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43875720
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43874680
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43874680
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43873800
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43873800
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43852600
+  now back at level of [FUNCTION], depth 2
+New tag id = 43871880
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43870460
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43870460
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43869420
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43869420
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43868540
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43868540
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43871880
+  now back at level of [FUNCTION], depth 2
+New tag id = 43891140
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43889720
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43889720
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43888680
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43888680
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43887800
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43887800
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43891140
+  now back at level of [FUNCTION], depth 2
+New tag id = 43885880
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43909000
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43909000
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43907920
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43907920
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43907020
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43907020
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43885880
+  now back at level of [FUNCTION], depth 2
+New tag id = 43905100
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43903680
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43903680
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43902600
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43902600
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43901700
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43901700
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43905100
+  now back at level of [FUNCTION], depth 2
+New tag id = 43957080
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43955660
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43955660
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43954620
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43954620
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43953740
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43953740
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43957080
+  now back at level of [FUNCTION], depth 2
+New tag id = 43951820
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43950400
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43950400
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43973880
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43973880
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43973000
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43973000
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43951820
+  now back at level of [FUNCTION], depth 2
+New tag id = 43971080
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43969660
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43969660
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43968620
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43968620
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43967740
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43967740
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43971080
+  now back at level of [FUNCTION], depth 2
+New tag id = 44006740
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44005320
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44005320
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44004280
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44004280
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44003400
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44003400
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44006740
+  now back at level of [FUNCTION], depth 2
+New tag id = 44001480
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44000060
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44000060
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44023560
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44023560
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44022680
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44022680
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44001480
+  now back at level of [FUNCTION], depth 2
+New tag id = 44020760
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44019340
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44019340
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44018300
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44018300
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44017420
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44017420
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44020760
+  now back at level of [FUNCTION], depth 2
+New tag id = 44040040
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44038620
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44038620
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44037580
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44037580
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44036700
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44036700
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44040040
+  now back at level of [FUNCTION], depth 2
+New tag id = 44034780
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44033360
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44033360
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44032320
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44032320
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44072360
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44072360
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44034780
+  now back at level of [FUNCTION], depth 2
+New tag id = 44070440
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44069740
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44069740
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44216320
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44216320
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44070440
+  now back at level of [FUNCTION], depth 2
+New tag id = 44214400
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44213700
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44213700
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44343920
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44343920
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44366740
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44366740
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44365020
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44365020
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44363300
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44363300
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44361580
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44361580
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44359860
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44359860
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44382660
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44382660
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44214400
+  now back at level of [FUNCTION], depth 2
+New tag id = 44380740
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44379940
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44379940
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44551100
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44551100
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44380740
+  now back at level of [FUNCTION], depth 2
+New tag id = 44549180
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44548380
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44548380
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 43870540
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 43870540
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 43869680
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 43869680
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 43890640
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 43890640
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44549180
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 43853400
+ now back at level of [SAMPLE], depth 1
+New tag id = 43887400
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 43886160
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43891400
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43891400
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43907740
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43907740
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43906340
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43906340
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43886160
+  now back at level of [FUNCTION], depth 2
+New tag id = 43903380
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43901100
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43901100
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43957800
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43957800
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43956500
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43956500
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43903380
+  now back at level of [FUNCTION], depth 2
+New tag id = 43953560
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43951420
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43951420
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43951580
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43951580
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43973960
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43973960
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43953560
+  now back at level of [FUNCTION], depth 2
+New tag id = 43971020
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 43968820
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 43968820
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43967520
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 43967520
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43971240
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43971240
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 43971020
+  now back at level of [FUNCTION], depth 2
+New tag id = 44004800
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44002700
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44002700
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44001360
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44001360
+   now back at level of [SPECTRUM], depth 3
+New tag id = 43999940
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 43999940
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44004800
+  now back at level of [FUNCTION], depth 2
+New tag id = 44022400
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44021260
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44021260
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44022400
+  now back at level of [FUNCTION], depth 2
+New tag id = 44234220
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44233040
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44233040
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44234220
+  now back at level of [FUNCTION], depth 2
+New tag id = 44460140
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44458780
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44458780
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44460140
+  now back at level of [FUNCTION], depth 2
+New tag id = 44683860
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44683060
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44683060
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44683860
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 43887400
+ now back at level of [SAMPLE], depth 1
+New tag id = 44796520
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 44795820
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44795120
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44795120
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45457280
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45457280
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45455560
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45455560
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45453840
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45453840
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45452120
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45452120
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45450400
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45450400
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44795820
+  now back at level of [FUNCTION], depth 2
+New tag id = 45473020
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 45472320
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45472320
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 45473020
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 44796520
+ now back at level of [SAMPLE], depth 1
+New tag id = 46134120
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 46133520
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 46132620
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 46132620
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 46133520
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 46134120
+ now back at level of [SAMPLE], depth 1
+New tag id = 44475320
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 44475320
+ now back at level of [SAMPLE], depth 1
+New tag id = 44505840
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 44505840
+ now back at level of [SAMPLE], depth 1
+New tag id = 44503600
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 44503600
+ now back at level of [SAMPLE], depth 1
+New tag id = 44501400
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 44501400
+ now back at level of [SAMPLE], depth 1
+New tag id = 44499200
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 44499200
+ now back at level of [SAMPLE], depth 1
+New tag id = 44554220
+ [ACCEPTANCE CRITERIA] depth: 1, child of SAMPLE
+end tag, object id = 44554220
+ now back at level of [SAMPLE], depth 1
+New tag id = 44569940
+ [INLET PARAMETERS] depth: 1, child of SAMPLE
+end tag, object id = 44569940
+ now back at level of [SAMPLE], depth 1
+end tag, object id = 43859140
+now back at level of [root], depth 0
+New tag id = 44631560
+[SAMPLE] depth: 0, child of root
+New tag id = 44649660
+ [COMPOUND] depth: 1, child of SAMPLE
+end tag, object id = 44649660
+ now back at level of [SAMPLE], depth 1
+New tag id = 44648160
+ [FRACTIONRESULTS] depth: 1, child of SAMPLE
+end tag, object id = 44648160
+ now back at level of [SAMPLE], depth 1
+New tag id = 44647160
+ [FRACTION] depth: 1, child of SAMPLE
+end tag, object id = 44647160
+ now back at level of [SAMPLE], depth 1
+New tag id = 44670640
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 44669320
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44666940
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44666940
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44665220
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44665220
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44663740
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44663740
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44669320
+  now back at level of [FUNCTION], depth 2
+New tag id = 44685080
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44682900
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44682900
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44681240
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44681240
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44679760
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44679760
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44685080
+  now back at level of [FUNCTION], depth 2
+New tag id = 44701380
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44699000
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44699000
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44697200
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44697200
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44695700
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44695700
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44701380
+  now back at level of [FUNCTION], depth 2
+New tag id = 44717040
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44714660
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44714660
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44712940
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44712940
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44768780
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44768780
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44717040
+  now back at level of [FUNCTION], depth 2
+New tag id = 44765580
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44763240
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44763240
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44761480
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44761480
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44784580
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44784580
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44765580
+  now back at level of [FUNCTION], depth 2
+New tag id = 44781380
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44779000
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44779000
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44801820
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44801820
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44800340
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44800340
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44781380
+  now back at level of [FUNCTION], depth 2
+New tag id = 44797160
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44795140
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44795140
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44818380
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44818380
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44816940
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44816940
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44797160
+  now back at level of [FUNCTION], depth 2
+New tag id = 44813740
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44811360
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44811360
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44899700
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44899700
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44898220
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44898220
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44813740
+  now back at level of [FUNCTION], depth 2
+New tag id = 44895020
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44892640
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44892640
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44915440
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44915440
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44913960
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44913960
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44895020
+  now back at level of [FUNCTION], depth 2
+New tag id = 44910760
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44932960
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44932960
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44931200
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44931200
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44929760
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44929760
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44910760
+  now back at level of [FUNCTION], depth 2
+New tag id = 44926560
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44956900
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44956900
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44955180
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44955180
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44953700
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44953700
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44926560
+  now back at level of [FUNCTION], depth 2
+New tag id = 44950500
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44972660
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44972660
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44970940
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44970940
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44969460
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44969460
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44950500
+  now back at level of [FUNCTION], depth 2
+New tag id = 44966260
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 44988460
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 44988460
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44986700
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 44986700
+   now back at level of [SPECTRUM], depth 3
+New tag id = 44985260
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 44985260
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 44966260
+  now back at level of [FUNCTION], depth 2
+New tag id = 45022980
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 45021800
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45021800
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45271600
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45271600
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45293300
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45293300
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45290420
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45290420
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45287540
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45287540
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45309240
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45309240
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45306360
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45306360
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45303480
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45303480
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 45022980
+  now back at level of [FUNCTION], depth 2
+New tag id = 45398540
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 45397400
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45397400
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45624420
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45624420
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45621540
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45621540
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45643240
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45643240
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45640360
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45640360
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45662020
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45662020
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45659180
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45659180
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 45656300
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45656300
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 45398540
+  now back at level of [FUNCTION], depth 2
+New tag id = 45677640
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 45676320
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45676320
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 45677640
+  now back at level of [FUNCTION], depth 2
+New tag id = 45901240
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 45899880
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45899880
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 46150360
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 46150360
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 45901240
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 44670640
+ now back at level of [SAMPLE], depth 1
+New tag id = 46146840
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 46170020
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 46167680
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 46167680
+   now back at level of [SPECTRUM], depth 3
+New tag id = 46166200
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 46166200
+   now back at level of [SPECTRUM], depth 3
+New tag id = 46164720
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 46164720
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 46170020
+  now back at level of [FUNCTION], depth 2
+New tag id = 46186040
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 46183700
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 46183700
+   now back at level of [SPECTRUM], depth 3
+New tag id = 46182220
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 46182220
+   now back at level of [SPECTRUM], depth 3
+New tag id = 46180740
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 46180740
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 46186040
+  now back at level of [FUNCTION], depth 2
+New tag id = 46202080
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 46200940
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 46200940
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 46202080
+  now back at level of [FUNCTION], depth 2
+New tag id = 43971280
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 43968780
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 43968780
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 43971280
+  now back at level of [FUNCTION], depth 2
+New tag id = 44932360
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44930300
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44930300
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44932360
+  now back at level of [FUNCTION], depth 2
+New tag id = 45673020
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 45670820
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 45670820
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 45673020
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 46146840
+ now back at level of [SAMPLE], depth 1
+New tag id = 43891060
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 43888780
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 43886600
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 43886600
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44766640
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44766640
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 43888780
+  now back at level of [FUNCTION], depth 2
+New tag id = 44784080
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44781220
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44781220
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 46634360
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 46634360
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44784080
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 43891060
+ now back at level of [SAMPLE], depth 1
+New tag id = 46632240
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 46631640
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 46630740
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 46630740
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 46631640
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 46632240
+ now back at level of [SAMPLE], depth 1
+New tag id = 47218780
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47218780
+ now back at level of [SAMPLE], depth 1
+New tag id = 47242520
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47242520
+ now back at level of [SAMPLE], depth 1
+New tag id = 47241720
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47241720
+ now back at level of [SAMPLE], depth 1
+New tag id = 47240920
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47240920
+ now back at level of [SAMPLE], depth 1
+New tag id = 47240120
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47240120
+ now back at level of [SAMPLE], depth 1
+New tag id = 47239320
+ [ACCEPTANCE CRITERIA] depth: 1, child of SAMPLE
+end tag, object id = 47239320
+ now back at level of [SAMPLE], depth 1
+New tag id = 47235880
+ [INLET PARAMETERS] depth: 1, child of SAMPLE
+end tag, object id = 47235880
+ now back at level of [SAMPLE], depth 1
+end tag, object id = 44631560
+now back at level of [root], depth 0
+New tag id = 47253140
+[SAMPLE] depth: 0, child of root
+New tag id = 47274160
+ [COMPOUND] depth: 1, child of SAMPLE
+end tag, object id = 47274160
+ now back at level of [SAMPLE], depth 1
+New tag id = 47273260
+ [FRACTIONRESULTS] depth: 1, child of SAMPLE
+end tag, object id = 47273260
+ now back at level of [SAMPLE], depth 1
+New tag id = 47272660
+ [FRACTION] depth: 1, child of SAMPLE
+end tag, object id = 47272660
+ now back at level of [SAMPLE], depth 1
+New tag id = 47272060
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 47271260
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47269840
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47269840
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47268800
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47268800
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47267920
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47267920
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47271260
+  now back at level of [FUNCTION], depth 2
+New tag id = 47290520
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47289100
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47289100
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47288020
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47288020
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47287120
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47287120
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47290520
+  now back at level of [FUNCTION], depth 2
+New tag id = 47285200
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47308320
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47308320
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47307260
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47307260
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47306380
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47306380
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47285200
+  now back at level of [FUNCTION], depth 2
+New tag id = 47304460
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47303040
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47303040
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47302000
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47302000
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47301120
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47301120
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47304460
+  now back at level of [FUNCTION], depth 2
+New tag id = 47331920
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47330500
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47330500
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47329460
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47329460
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47328580
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47328580
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47331920
+  now back at level of [FUNCTION], depth 2
+New tag id = 47326660
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47325240
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47325240
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47348740
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47348740
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47347860
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47347860
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47326660
+  now back at level of [FUNCTION], depth 2
+New tag id = 47345940
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47344520
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47344520
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47343480
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47343480
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47342600
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47342600
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47345940
+  now back at level of [FUNCTION], depth 2
+New tag id = 47365220
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47363800
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47363800
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47362760
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47362760
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47361880
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47361880
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47365220
+  now back at level of [FUNCTION], depth 2
+New tag id = 47359960
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47358540
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47358540
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47382040
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47382040
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47381160
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47381160
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47359960
+  now back at level of [FUNCTION], depth 2
+New tag id = 47379240
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47377820
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47377820
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47376780
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47376780
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47375900
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47375900
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47379240
+  now back at level of [FUNCTION], depth 2
+New tag id = 47464060
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 47462640
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 47462640
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47461600
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 47461600
+   now back at level of [SPECTRUM], depth 3
+New tag id = 47460720
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 47460720
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 47464060
+  now back at level of [FUNCTION], depth 2
+New tag id = 47458800
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 47458100
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47458100
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47571900
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47571900
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47594720
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47594720
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47593000
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47593000
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47591280
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47591280
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47589560
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47589560
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47587840
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47587840
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47610660
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47610660
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47608940
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47608940
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47607220
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47607220
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 47458800
+  now back at level of [FUNCTION], depth 2
+New tag id = 47605300
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 47604600
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47604600
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47751200
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47751200
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 47605300
+  now back at level of [FUNCTION], depth 2
+New tag id = 47536240
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 47535440
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47535440
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47903200
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47903200
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 47536240
+  now back at level of [FUNCTION], depth 2
+New tag id = 47901280
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 47900480
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47900480
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 47981540
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 47981540
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 47901280
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 47272060
+ now back at level of [SAMPLE], depth 1
+New tag id = 48077680
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 48076880
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 48075460
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 48075460
+   now back at level of [SPECTRUM], depth 3
+New tag id = 48074580
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 48074580
+   now back at level of [SPECTRUM], depth 3
+New tag id = 48073700
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 48073700
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 48076880
+  now back at level of [FUNCTION], depth 2
+New tag id = 48071780
+  [SPECTRUM] depth: 2, child of FUNCTION
+New tag id = 48094900
+   [MASSES] depth: 3, child of SPECTRUM
+end tag, object id = 48094900
+   now back at level of [SPECTRUM], depth 3
+New tag id = 48094000
+   [RESULTS] depth: 3, child of SPECTRUM
+end tag, object id = 48094000
+   now back at level of [SPECTRUM], depth 3
+New tag id = 48093120
+   [MS] depth: 3, child of SPECTRUM
+end tag, object id = 48093120
+   now back at level of [SPECTRUM], depth 3
+end tag, object id = 48071780
+  now back at level of [FUNCTION], depth 2
+New tag id = 48091200
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 48090500
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 48090500
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 48091200
+  now back at level of [FUNCTION], depth 2
+New tag id = 48236900
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 48236200
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 48236200
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 48236900
+  now back at level of [FUNCTION], depth 2
+New tag id = 48382600
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 48406340
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 48406340
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 48382600
+  now back at level of [FUNCTION], depth 2
+New tag id = 48487200
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 48486400
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 48486400
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 48487200
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 48077680
+ now back at level of [SAMPLE], depth 1
+New tag id = 48640740
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 48640040
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 48639340
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 48639340
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44137160
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44137160
+   now back at level of [CHROMATOGRAM], depth 3
+New tag id = 44196600
+   [PEAK] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44196600
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 48640040
+  now back at level of [FUNCTION], depth 2
+New tag id = 44263480
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 44279000
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 44279000
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 44263480
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 48640740
+ now back at level of [SAMPLE], depth 1
+New tag id = 46862020
+ [FUNCTION] depth: 1, child of SAMPLE
+New tag id = 46861020
+  [CHROMATOGRAM] depth: 2, child of FUNCTION
+New tag id = 46859520
+   [TRACE] depth: 3, child of CHROMATOGRAM
+end tag, object id = 46859520
+   now back at level of [CHROMATOGRAM], depth 3
+end tag, object id = 46861020
+  now back at level of [FUNCTION], depth 2
+end tag, object id = 46862020
+ now back at level of [SAMPLE], depth 1
+New tag id = 47531920
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47531920
+ now back at level of [SAMPLE], depth 1
+New tag id = 47530560
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47530560
+ now back at level of [SAMPLE], depth 1
+New tag id = 47775280
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47775280
+ now back at level of [SAMPLE], depth 1
+New tag id = 47773960
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47773960
+ now back at level of [SAMPLE], depth 1
+New tag id = 47772640
+ [FUNCTION] depth: 1, child of SAMPLE
+end tag, object id = 47772640
+ now back at level of [SAMPLE], depth 1
+New tag id = 47771280
+ [ACCEPTANCE CRITERIA] depth: 1, child of SAMPLE
+end tag, object id = 47771280
+ now back at level of [SAMPLE], depth 1
+New tag id = 47790100
+ [INLET PARAMETERS] depth: 1, child of SAMPLE
+end tag, object id = 47790100
+ now back at level of [SAMPLE], depth 1
+end tag, object id = 47253140
+now back at level of [root], depth 0
+At the end of rpt reading, depth 0. [root] has 3 children:
+43859140

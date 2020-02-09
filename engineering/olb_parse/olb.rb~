@@ -11,6 +11,7 @@ criteria = Proc.new {|filename| filename=~/[\djt]\.[Oo][Ll][Bb]$/}
 olbpath.children.each do |file|
 	next unless criteria[file]
 	batchlist.push(Batch.new(file)) if file =~ /\.OLB$/
+		puts "While batch #{file}: #{err}"
 end
 
 
