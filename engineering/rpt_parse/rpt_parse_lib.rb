@@ -94,7 +94,6 @@ class Sample
 		@ms_method = sample_tag.content["MSMethod"].to_s
 		@position = sample_tag.content["Well"].to_s
 		@analysis_time = sample_tag.content["AnalysisTime"].to_f
-		puts @inject_volume
 	end #end init
 end #end class
 
