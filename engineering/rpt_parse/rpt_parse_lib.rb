@@ -27,7 +27,7 @@ end #end class Tag
 
 class Sample
 
-	attr_reader :max_pressure, :pressure_curve, :acqu_time, :name, :description, :lc_method, :ms_method, :position, :analysis_time, :inject_volume, :mslist, :tic_p, :tic_p_max, :tic_m, :tic_m_max, :dads_curve, :dads_max, :dads_wv
+	attr_reader :max_pressure, :pressure_curve, :acqu_time, :name, :description, :lc_method, :ms_method, :ms_tune,:position, :analysis_time, :inject_volume, :mslist, :tic_p, :tic_p_max, :tic_m, :tic_m_max, :dads_curve, :dads_max, :dads_wv
 	def initialize(sample_tag)
 		@pressure_curve = Array.new
 		@tic_p = Array.new
@@ -90,6 +90,7 @@ class Sample
 		@acqu_time = Time.parse(sample_tag.content["Date"]+" "+sample_tag.content["Time"])
 		@name = sample_tag.content["SampleID"].to_s
 		@description = sample_tag.content["SampleDescription"].to_s
+		@ms_tune = sample_tag.content["MSTune"].to_s
 		@lc_method = sample_tag.content["InletMethod"].to_s
 		@ms_method = sample_tag.content["MSMethod"].to_s
 		@position = sample_tag.content["Well"].to_s
