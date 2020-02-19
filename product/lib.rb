@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 
 require 'time'
+require '../engineering/rpt_parse/rpt_parse_lib.rb'
 
 def display_bytes(str)
 	ret = String.new
