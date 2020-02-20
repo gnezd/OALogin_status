@@ -83,13 +83,15 @@ def get_machine(ols_path)
 				n_o_v = 1
 			end #more than one
 			end #In 48 well plate
-
+			olb = Batch.new(path+batch[1]+".OLB")
 			output += "<td nowrap class=\"internal\">#{positions}</td>"
-			lcmethod = `grep 'LCMethod=' "#{path}/#{batch[1]}.OLB"`
-			lcmethod = lcmethod.split('=')[1].chomp
+			#lcmethod = `grep 'LCMethod=' "#{path}/#{batch[1]}.OLB"`
+			#lcmethod = lcmethod.split('=')[1].chomp
+			lcmethod = olb.batch_param["LCMethod"]
 			output += "<td nowrap class=\"internal\">#{lcmethod}</td>"
-			time_min = `grep 'AnalysisTime=' "#{path}/#{batch[1]}.OLB"`
-			time_min = time_min.split('=')[1].chomp.to_f
+			#time_min = `grep 'AnalysisTime=' "#{path}/#{batch[1]}.OLB"`
+			#time_min = time_min.split('=')[1].chomp.to_f
+			time_min = olb.batch_param["AnalysisTime"].to_f
 			if time_min == nil
 				time_min = 0
 			end
@@ -101,7 +103,8 @@ def get_machine(ols_path)
 			else
 				output += "- / "
 			end
-			eco_sched = `grep 'EconomyScheduling=' "#{path}/#{batch[1]}.OLB"`.split('=')[1].to_i
+			#eco_sched = `grep 'EconomyScheduling=' "#{path}/#{batch[1]}.OLB"`.split('=')[1].to_i
+			eco_sched = olb.batch_param["EconomyScheduling"].to_i
 			if eco_sched == 1
 				output += "Y"
 			else
