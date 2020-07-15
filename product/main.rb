@@ -142,8 +142,10 @@ $machines.each do |machine|
 begin
 	puts "acquiring machine named #{machine.name} at ols path of #{machine.path}"
 	output += get_machine(machine.path)
-rescue
-	output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"#{machine.name}\">\n<p class=\"m_table_title\">#{machine.name} Canot be reached</p></div>\n"
+	puts "machine #{machine.name} qcquired"
+rescue RuntimeError => err
+	#output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"#{machine.name}\">\n<p class=\"m_table_title\">#{machine.name} Canot be reached</p></div>\n"
+	puts err
 		
 end
 end #end machine

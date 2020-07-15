@@ -163,8 +163,9 @@ class Batch
 @batch_param = {}
 @plates, @samples = [], []
 ptr = []
-fin = File.open(olbpath, "r")
+fin = File.open(olbpath, "r:UTF-8")
 raw = fin.readlines
+fin.close
 current_plate=0
 begin
 
@@ -202,6 +203,9 @@ rescue RuntimeError => err
 	else
 		raise "Fucked up"
 	end
+rescue ArgumentError => err
+	puts err
+	puts "in #{olbpath}"
 end
 	
 	end
@@ -232,7 +236,7 @@ def p_curve_plot(path, svg_out, n)
 		plot_data.close
 
 	gnuplot_command =<<"END"
-set terminal svg size 1000 600
+set terminal svg enhanced mouse jsdir './gnuplot_js/' size 1000 600
 set output "#{svg_out}"
 set xrange [0:7]
 set yrange[0:*]

@@ -3,7 +3,7 @@
 def sample_logbook(rpt_path, output)
 	fo = File.open(output+".csv", "w")
 	fo.puts "Generated ad #{Time.now}"
-	fo.puts "rpt.name, sample.name, sample.description,sample.acqu_time, sample.lc_method, sample.ms_method, sample.ms_tune, sample.inject_volume, max_pressure"
+	fo.puts "rpt.name, sample.name, sample.description, sample.position, sample.acqu_time, sample.lc_method, sample.ms_method, sample.ms_tune, sample.inject_volume, max_pressure"
 =begin
 criteria = Proc.new {|filename, rpt| filename =~ /\.rpt$/ &&
 		     Time.now-File.mtime(rpt_path+filename) < 86400*last_n_day.to_i
@@ -19,7 +19,7 @@ filelist.each do |file|
 	#next unless criteria[file, rpt]
 	rpt.samples.each do |sample|
 		puts rpt.name
-		fo.puts ["\"#{rpt.name}\"", "\"#{sample.name}\"", "\"#{sample.description}\"", sample.acqu_time, sample.lc_method, sample.ms_method, sample.ms_tune, sample.inject_volume, sample. max_pressure].join(",")
+		fo.puts ["\"#{rpt.name}\"", "\"#{sample.name}\"", "\"#{sample.description}\"", "\"#{sample.position}\"", sample.acqu_time, sample.lc_method, sample.ms_method, sample.ms_tune, sample.inject_volume, sample. max_pressure].join(",")
 #		x, y = [sample.name], [""]
 #		sample.pressure_curve.each do |pt|
 #			x.push(pt[0])
