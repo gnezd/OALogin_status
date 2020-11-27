@@ -234,19 +234,19 @@ def p_curve_plot(path, svg_out, n)
   end # end report iter
   plot_data.close
 
-  gnuplot_command = <<~"END"
-    set terminal svg enhanced mouse jsdir './gnuplot_js/' size 1000 600
-    set output "#{svg_out}"
-    set xrange [0:7]
-    set yrange[0:*]
-    set key outside center bottom
-  END
+  gnuplot_command = <<"END"
+set terminal svg enhanced mouse jsdir './gnuplot_js/' size 1000 600
+set output "#{svg_out}"
+set xrange [0:7]
+set yrange[0:*]
+set key outside center bottom
+END
   gnuplot_command << "plot 'data' "
   (0..fname_list.size - 1).each do |fname_index|
     gnuplot_command << ", '' " if fname_index > 0
-    gnuplot_command << "index #{fname_index} with lines t '#{fname_list[fname_index].split(/_(#{Time.now.strftime("%Y%m%d")}|#{(Time.now - 86400).strftime("%Y%m%d")})/)[0].gsub('_', '\_')} | #{time_list[fname_index].strftime("%R")} | #{lcmethod_list[fname_index].gsub('_', '\_')} | #{injection_volume_list[fname_index]} uL'"
+    gnuplot_command << "index #{fname_index} with lines t '#{fname_list[fname_index].split(/_(#{Time.now.strftime("%Y%m%d")[0]}|#{(Time.now - 86400).strftime("%Y%m%d")})/)[0].gsub('_', '\_').gsub(/\'/, "")} | #{time_list[fname_index].strftime("%R")} | #{lcmethod_list[fname_index].gsub('_', '\_')} | #{injection_volume_list[fname_index]} uL'"
   end
-
+  #escaping single and double quotes in gnuplot is non-trivial. First take the single quotes out.
   image, s = Open3.capture2(
     "gnuplot",
     :stdin_data => gnuplot_command, :binmode => true
