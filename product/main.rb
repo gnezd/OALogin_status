@@ -22,6 +22,7 @@ def get_machine(ols_path)
 	(0..plate_2[0].length-1).each do |i| #Set vial position - plate # to 2 if it's from plate 2
 		plate_2[0][i][3][0..3] = "\x02\0\0\0"
 	end
+	response = `rm ./ols` #remove ols temp to avoid ghost image from SQ1 to SQ3
 	batchlist = plate_1[0] + plate_2[0]
 	batchlist.sort! {|a, b| a[2] <=> b[2]} #sort with submission time
 
@@ -83,6 +84,7 @@ def get_machine(ols_path)
 				n_o_v = 1
 			end #more than one
 			end #In 48 well plate
+			begin
 			olb = Batch.new(path+batch[1]+".OLB")
 			output += "<td nowrap class=\"internal\">#{positions}</td>"
 			#lcmethod = `grep 'LCMethod=' "#{path}/#{batch[1]}.OLB"`
@@ -111,6 +113,9 @@ def get_machine(ols_path)
 				output += "-"
 			end
 			output +=  "</td></tr>"
+			rescue Exception => err
+			output += "<td nowrap class=\"internal\" colspan=\"4\">Batch file error!<!--#{err}--></td></tr>"
+			end
 		end #end batchlist loop
 
 
@@ -142,11 +147,15 @@ $machines.each do |machine|
 begin
 	puts "acquiring machine named #{machine.name} at ols path of #{machine.path}"
 	output += get_machine(machine.path)
-	puts "machine #{machine.name} qcquired"
+	puts "machine #{machine.name} acquired"
 rescue RuntimeError => err
 	#output += "<div class=\"machinebox_red\"><table class=\"machinetable\" id =\"#{machine.name}\">\n<p class=\"m_table_title\">#{machine.name} Canot be reached</p></div>\n"
 	puts err
 		
+rescue NoMethodError => err
+	output += "NoNethodErr: #{err}"
+rescue Exception => err
+	output += "Machine #{machine.name}'s got some other error: #{err}"
 end
 end #end machine
 
