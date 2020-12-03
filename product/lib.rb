@@ -235,11 +235,13 @@ def p_curve_plot(path, svg_out, n)
   plot_data.close
 
   gnuplot_command = <<"END"
-set terminal svg enhanced mouse jsdir './gnuplot_js/' size 1000 600
+set terminal svg enhanced mouse standalone size 1000 600 background rgb 'black'
+set border lc "white"
 set output "#{svg_out}"
 set xrange [0:7]
 set yrange[0:*]
-set key outside center bottom
+set key outside center bottom textcolor rgb "white"
+set object 1 rectangle from screen 0,0 to screen 1,1 fc rgb "black" behind
 END
   gnuplot_command << "plot 'data' "
   (0..fname_list.size - 1).each do |fname_index|
