@@ -116,22 +116,20 @@ def get_machine(ols_path)
     end
   end # end batchlist loop
 
-  output += "</table><p>OALogin last sign of life detected at #{ols_updtime}</p>\n</div>"
+  output += "</table><p id=\"life_sign_#{sqnum}\">OALogin last sign of life detected at <span id=\"#{sqnum}time\">#{ols_updtime}</span></p>\n</div>"
 
   return output
 end # def get_machine
 
 #---main
 output = <<~EOHeader
+    <html>
     <head>
     <title>#{$html_title}</title>
     <link rel="stylesheet" type="text/css" href="ui.css">
     <meta http-equiv="refresh" content="30">
     </head>
-  #{'  '}
     <body>
-    <!--header before-->
-  #{'  '}
     <div id="pagebox">
 EOHeader
 
@@ -151,6 +149,27 @@ $machines.each do |machine|
 end # end machine
 
 output += "<p>Page updated at #{Time.now}</p></div>"
+output += <<~EOScript
+<script>
+var browser_t = new Date();
+var sq1_t = new Date(document.getElementById('1time').innerHTML);
+var sq3_t = new Date(document.getElementById('3time').innerHTML);
+
+if (browser_t - sq1_t > 120000) {
+  document.getElementById('life_sign_1').style.backgroundColor = 'red';
+  var s_o_l = document.getElementById('life_sign_1').innerHTML
+  document.getElementById('life_sign_1').innerHTML = s_o_l + "<br> Sign of life delay > 2 min"
+}
+
+if (browser_t - sq3_t > 120000) {
+  document.getElementById('life_sign_3').style.backgroundColor = 'red';
+  var s_o_l = document.getElementById('life_sign_3').innerHTML
+  document.getElementById('life_sign_3').innerHTML = s_o_l + "<br> Sign of life delay > 2 min"
+}
+</script>
+EOScript
+
+output += "</body></html>"
 fo = File.open("#{$html_path}stat.html", "w")
 fo.puts output
 fo.close
